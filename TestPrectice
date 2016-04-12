@@ -1,0 +1,45 @@
+public class Solution {
+    public int addDigits(int num) {
+       
+       int a = 0;
+       
+        a = sumDigits(num);
+        
+        if(num < 10)
+        {
+            return num;
+        }
+        
+        else
+        {
+         while( a > 11)
+         {
+             a = sumDigits(a);
+         }
+         
+         return a;
+        }
+       
+    }
+    
+    public int sumDigits(int n)
+    {
+        int a = 0;
+        
+        while(n > 0){
+        
+        n = n % 10;
+        
+        a = a+n;
+        
+        n = n/10;
+        }
+        
+        System.out.println(a);
+        return a;
+        
+        
+        
+        
+    }
+}
